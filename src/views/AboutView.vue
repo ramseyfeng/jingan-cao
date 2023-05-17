@@ -64,7 +64,7 @@ const { containerWidth, containerHeight } = useWindow()
   right: 0;
   padding: 0.5rem 1rem;
   button {
-    margin-right: 0.5rem;
+    margin-right: 1.5rem;
   }
 }
 
