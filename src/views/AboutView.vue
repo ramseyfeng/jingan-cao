@@ -1,4 +1,9 @@
 <template>
+  <div class="d-flex var--absolute actions-bar">
+    <var-button type="primary" @click="showConfig = true">配置</var-button>
+    <var-button type="success" @click="start" v-show="!isRunning">开始</var-button>
+    <var-button type="danger" @click="stop" v-show="isRunning">停止</var-button>
+  </div>
   <var-dialog
     v-model:show="showConfig"
     close-on-click-overlay
@@ -30,11 +35,6 @@
       </li>
     </ul>
   </canvas>
-  <div class="d-flex var--absolute actions-bar">
-    <var-button type="primary" @click="showConfig = true">配置</var-button>
-    <var-button type="success" @click="start" v-show="!isRunning">开始</var-button>
-    <var-button type="danger" @click="stop" v-show="isRunning">停止</var-button>
-  </div>
 </template>
 
 <script lang="ts" setup>
@@ -56,11 +56,7 @@ const { containerWidth, containerHeight } = useWindow()
 .actions-bar {
   z-index: 1;
   right: 0;
-  //visibility: hidden;
   padding: 0.5rem 1rem;
-  /*&:hover {
-    visibility: visible;
-  }*/
   button {
     margin-right: 0.5rem;
   }
