@@ -1,8 +1,14 @@
 <template>
   <div class="d-flex var--absolute actions-bar">
-    <var-button type="primary" @click="showConfig = true">配置</var-button>
-    <var-button type="success" @click="start" v-show="!isRunning">开始</var-button>
-    <var-button type="danger" @click="stop" v-show="isRunning">停止</var-button>
+    <var-button type="primary" @click="showConfig = true">
+      <var-icon name="cog-outline" />
+    </var-button>
+    <var-button type="success" @click="start" v-show="!isRunning && rawContent.length">
+      <var-icon name="play-circle-outline" />
+    </var-button>
+    <var-button type="danger" @click="stop" v-show="isRunning"
+      ><var-icon name="pin"></var-icon
+    ></var-button>
   </div>
   <var-dialog
     v-model:show="showConfig"
