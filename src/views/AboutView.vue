@@ -71,7 +71,7 @@ const { containerWidth, containerHeight } = useWindow()
   transform: translate(-50%, -50%);
 }
 .galaxy-bg {
-  background-image: url('src/assets/img/bg-origin.jpg');
+  background-image: url('@/assets/img/bg-origin.jpg');
   background-size: 100% 100%;
   background-position: center center;
   background-repeat: no-repeat;
